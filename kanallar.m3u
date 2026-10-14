@@ -1,21 +1,21 @@
 #EXTM3U
-#EXTINF:-1 tvg-name="TRT 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/960px-TRT_1_logo_%282021-%29.svg.png" group-title="Genel",TRT 1
+#EXTINF:-1 tvg-name="TRT 1" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/TRT_1_logo_%282021-%29.svg/960px-TRT_1_logo_%282021-%29.svg.png" group-title="Ulusal",TRT 1
 https://tv-trt1.medya.trt.com.tr/master.m3u8
-#EXTINF:-1 tvg-name="ATV" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Genel",ATV
+#EXTINF:-1 tvg-name="ATV" tvg-logo="https://i.imgur.com/HyVUwFC.png" group-title="Ulusal",ATV
 https://rnttwmjcin.turknet.ercdn.net/lcpmvefbyo/atv/atv_1080p.m3u8
-#EXTINF:-1 tvg-name="Kanal D" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="Genel",Kanal D
+#EXTINF:-1 tvg-name="Kanal D" tvg-logo="https://i.imgur.com/9o1atM6.png" group-title="Ulusal",Kanal D
 https://demiroren.daioncdn.net/kanald/kanald.m3u8?app=kanald_web&ce=3
-#EXTINF:-1 tvg-name="Star TV" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="Genel",Star TV
+#EXTINF:-1 tvg-name="Star TV" tvg-logo="https://i.imgur.com/9O3DHRB.png" group-title="Ulusal",Star TV
 https://dogus.daioncdn.net/startv/startv_720p.m3u8?app=a20ac41e-bdc3-4aa1-934d-26b484480ac9&ce=3&sid=8l4w3lst4co5
-#EXTINF:-1 tvg-name="Now TV" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Genel",Now TV
+#EXTINF:-1 tvg-name="Now TV" tvg-logo="https://i.imgur.com/5EYjWK7.png" group-title="Ulusal",Now TV
 https://uycyyuuzyh.turknet.ercdn.net/nphindgytw/nowtv/nowtv.m3u8
-#EXTINF:-1 tvg-name="TV8" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png" group-title="Genel",TV8
+#EXTINF:-1 tvg-name="TV8" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/thumb/6/68/Tv8_Yeni_Logo.png/960px-Tv8_Yeni_Logo.png" group-title="Ulusal",TV8
 https://tv8.daioncdn.net/tv8/tv8.m3u8?app=7ddc255a-ef47-4e81-ab14-c0e5f2949788&ce=3
-#EXTINF:-1 tvg-name="Kanal 7" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Genel",Kanal 7
+#EXTINF:-1 tvg-name="Kanal 7" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Ulusal",Kanal 7
 https://kanal7-live.daioncdn.net/kanal7/kanal7.m3u8
-#EXTINF:-1 tvg-name="TV8 5" tvg-logo="https://files.sikayetvar.com/lg/cmp/23/239124.png?1648044928" group-title="Genel",TV8 5
+#EXTINF:-1 tvg-name="TV8 5" tvg-logo="https://files.sikayetvar.com/lg/cmp/23/239124.png?1648044928" group-title="Ulusal",TV8 5
 https://tv8.daioncdn.net/tv8bucuk/tv8bucuk_1080p.m3u8?&sid=8u112x9p05bn&app=bf58ab52-4865-4c81-b223-26b41009801e&ce=3
-#EXTINF:-1 tvg-name="TRT Türk" tvg-logo="https://www.trtturk.com.tr/public/logo/d60ab555-f948-464a-a139-df5410d2a7b5/trtturk_logo.png" group-title="Genel",TRT Türk
+#EXTINF:-1 tvg-name="TRT Türk" tvg-logo="https://www.trtturk.com.tr/public/logo/d60ab555-f948-464a-a139-df5410d2a7b5/trtturk_logo.png" group-title="Ulusal",TRT Türk
 https://tv-trtturk.medya.trt.com.tr/master_1440.m3u8
 #EXTINF:-1 tvg-name="TRT Haber" tvg-logo="https://trthaberstatic.cdn.wp.trt.com.tr/static/images/logo.svg" group-title="Haber",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master_1080.m3u8
@@ -25,5 +25,31 @@ https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8?&live=true&app=com.c
 https://dogus.daioncdn.net/ntv/ntv_1080p.m3u8?token=e8c0dec16bf84c8cc187224d13811c0e705fd2c58b25d7ee&sid=8u11hrotqosx&app=c68bddbe-3dbf-49f7-892a-93de5ae37f1f&ce=3
 #EXTINF:-1 tvg-name="HABER TÜRK" tvg-logo="https://www.haberturk.com/images/common/logo/svg/haberturk-logo.svg" group-title="Haber",HABER TÜRK
 https://ciner.daioncdn.net/haberturktv/haberturktv_1080p.m3u8?sid=8u11khfufyip&app=c98ab0b0-50cc-495b-bb37-778e91f5ff5b&ce=3
-#EXTINF:-1 tvg-name="A Haber" tvg-logo="https://iahbr.tmgrup.com.tr/tmdcore/v1/images/logo.png" group-title="Genel",A Haber
+#EXTINF:-1 tvg-name="A Haber" tvg-logo="https://iahbr.tmgrup.com.tr/tmdcore/v1/images/logo.png" group-title="Haber",A Haber
 https://trkvz.daioncdn.net/ahaber/ahaber_1080p.m3u8?e=1792034716&st=uyySmLmX3cwBbHFka9iHXQ&sid=8u11p9jvr1sn&app=9aedd495-cc54-4ad3-a01d-9573163f078a&ce=2
+#EXTINF:-1 tvg-name="HALK TV" tvg-logo="https://i.ibb.co/DYhmg6k/halk-tv.png" group-title="Haber",HALK TV
+https://halktv.daioncdn.net/halktv/halktv_1080p.m3u8?app=c86957d3-74a7-44da-9ad2-dc358c769609
+#EXTINF:-1 tvg-name="TV100" tvg-logo="https://s2.ensonhaber.com/assets/img/tv/tv100.webp" group-title="Haber",TV100
+https://tv.ensonhaber.com/tv100/tv100_360p-1789845259.ts
+#EXTINF:-1 tvg-name="Ülke TV" tvg-logo="https://tr.canlitv.watch/channels/ulke-tv.webp" group-title="Haber",Ülke TV
+https://livetv.radyotvonline.net/kanal7live/ulketv/chunklist.m3u8
+#EXTINF:-1 tvg-name="TV2" tvg-logo="https://static.tv2.com.tr/assets/img/tv2-logo.svg?v=1" group-title="Ulusal",TV2
+https://demiroren.daioncdn.net/teve2/teve2_1080p.m3u8?&sid=8u178djhjvzk&app=6aab838a-437e-4a1b-bbd0-e30f79cdbbbd&ce=3
+#EXTINF:-1 tvg-name="Show TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f1/Logo_of_Show_TV.png?utm_source=tr.wikipedia.org&utm_campaign=index&utm_content=original" group-title="Ulusal",Show TV
+https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv_720p.m3u8
+#EXTINF:-1 tvg-name="Kral Pop" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2g3GXFM3hogCQwv94vjWVZa0Fw2bDWeIVes_p4HmqbjRGd3qWdbNpxVNJ&s=10" group-title="Müzik",Kral Pop
+https://dogusdyg-kralpoptv.lg.mncdn.com/dogusdyg-kralpoptv/dogusdyg_kralpoptv.smil/chunklist_w2146770241_b2000096.m3u8?st=NVOMsEtqomPOEoN52zag7Q&e=1792080569
+#EXTINF:-1 tvg-name="TRT Müzik" tvg-logo="https://tr.canlitv.watch/channels/trt-muzik.webp" group-title="Müzik",TRT Müzik
+https://tv-trtmuzik.medya.trt.com.tr/master_480.m3u8
+#EXTINF:-1 tvg-name="Dream Türk" tvg-logo="https://tr.canlitv.watch/channels/dream-turk-tv.webp" group-title="Müzik",Dream Türk
+https://live.duhnet.tv/S2/HLS_LIVE/dreamturknp/track_4_1250/playlist.m3u8?&live=true&app=com.dreamturk&st=F1_CoiJiqsqqScvZS8ixng&e=1792005634
+#EXTINF:-1 tvg-name="PowerTürk TV" tvg-logo="https://cdn.powergroup.com.tr/image/70x70/powerapp/channels/v3/logo_35.png?v=1" group-title="Müzik",PowerTürk TV
+https://livetv.powerapp.com.tr/powerturkTV/powerturkhd.smil/chunklist_b7596000_sltur.m3u8?nimblesessionid=1068767943
+#EXTINF:-1 tvg-name="Number1" tvg-logo="https://www.numberone.com.tr/wp-content/uploads/2021/10/yeni-logonr1.png" group-title="Müzik",Number1
+https://number1.radyotvonline.net/hls/play/number1_turk_fm.m3u8?UserCode=ea04d771-676f-4e6d-8351-9b463ae28952
+#EXTINF:-1 tvg-name="Süper FM Radyo" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/f/ff/S%C3%BCper_FM_logo.png?utm_source=tr.wikipedia.org&utm_campaign=index&utm_content=original" group-title="Müzik",Süper FM Radyo
+https://29053.live.streamtheworld.com/SUPER_FM128AAC.aac?dist=https%3A%2F%2Fkarnaval.com%2Fradyolar%2Fsuperfm&tdsdk=js-2.9&swm=false&pname=TDSdk&pversion=2.9&banners=300x250&gender=F%2CM&age=34_45%2C45%2B&ses=AB%2CC1&title=B%2CMK%2CSM%2CE%2CEH%2CGAM%2CSME%2CANR%2CCAF%2CSH%2CHF%2CSF&burst-time=15&sbmid=27a2bbe4-e5cf-4547-dcb6-0e44e9d9b8e1
+#EXTINF:-1 tvg-name="Metro FM" tvg-logo="https://ajansgiller.com/wp-content/uploads/2025/07/Metro-FM.jpg" group-title="Müzik",Metro FM
+https://28513.live.streamtheworld.com/METRO_FM128AAC.aac?dist=https%3A%2F%2Fkarnaval.com%2Fradyolar%2Fmetrofm&gender=M&age=12_34&ses=AB%2CC1&title=B%2CNW%2CS%2CGAM%2CSME%2CANR%2CCAF%2CSH%2CHF%2CSF&tdsdk=js-2.9&swm=false&pname=TDSdk&pversion=2.9&banners=300x250&burst-time=15&sbmid=eec43b56-bf91-409c-c5c3-d4f7f7675a56
+#EXTINF:-1 tvg-name="Radyo Fenomen" tvg-logo="https://www.canliradyodinle.fm/wp-content/uploads/radyo-fenomen.jpg" group-title="Müzik",Radyo Fenomen
+https://live.radyofenomen.com/fenomen/abr/fenomen/96/chunks.m3u8?nimblesessionid=4246798390
