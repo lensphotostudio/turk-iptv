@@ -33,7 +33,7 @@ https://halktv.daioncdn.net/halktv/halktv_1080p.m3u8?app=c86957d3-74a7-44da-9ad2
 https://tv.ensonhaber.com/tv100/tv100_360p-1789845259.ts
 #EXTINF:-1 tvg-name="Ülke TV" tvg-logo="https://tr.canlitv.watch/channels/ulke-tv.webp" group-title="Haber",Ülke TV
 https://livetv.radyotvonline.net/kanal7live/ulketv/chunklist.m3u8
-#EXTINF:-1 tvg-name="TV2" tvg-logo="https://static.tv2.com.tr/assets/img/tv2-logo.svg?v=1" group-title="Ulusal",TV2
+#EXTINF:-1 tvg-name="TV2" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/archive/a/a4/20130801131617%21Tv2_logosu.png" group-title="Ulusal",TV2
 https://demiroren.daioncdn.net/teve2/teve2_1080p.m3u8?&sid=8u178djhjvzk&app=6aab838a-437e-4a1b-bbd0-e30f79cdbbbd&ce=3
 #EXTINF:-1 tvg-name="Show TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f1/Logo_of_Show_TV.png?utm_source=tr.wikipedia.org&utm_campaign=index&utm_content=original" group-title="Ulusal",Show TV
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv_720p.m3u8
@@ -53,3 +53,5 @@ https://29053.live.streamtheworld.com/SUPER_FM128AAC.aac?dist=https%3A%2F%2Fkarn
 https://28513.live.streamtheworld.com/METRO_FM128AAC.aac?dist=https%3A%2F%2Fkarnaval.com%2Fradyolar%2Fmetrofm&gender=M&age=12_34&ses=AB%2CC1&title=B%2CNW%2CS%2CGAM%2CSME%2CANR%2CCAF%2CSH%2CHF%2CSF&tdsdk=js-2.9&swm=false&pname=TDSdk&pversion=2.9&banners=300x250&burst-time=15&sbmid=eec43b56-bf91-409c-c5c3-d4f7f7675a56
 #EXTINF:-1 tvg-name="Radyo Fenomen" tvg-logo="https://www.canliradyodinle.fm/wp-content/uploads/radyo-fenomen.jpg" group-title="Müzik",Radyo Fenomen
 https://live.radyofenomen.com/fenomen/abr/fenomen/96/chunks.m3u8?nimblesessionid=4246798390
+#EXTINF:-1 tvg-name="BeinSports 1" tvg-logo="https://images.seeklogo.com/logo-png/48/1/bein-sports-1-logo-png_seeklogo-481583.png" group-title="BeinSports",BeinSports 1
+https://andro.evrenesoglu149.click/checklist/androstreamlivebs1.m3u8
