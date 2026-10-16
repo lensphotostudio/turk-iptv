@@ -20,7 +20,7 @@ https://tv-trtturk.medya.trt.com.tr/master_1440.m3u8
 #EXTINF:-1 tvg-name="TRT Haber" tvg-logo="https://www.trt.net.tr/_nuxt/img/haber.3fee2de.png" group-title="Haber",TRT Haber
 https://tv-trthaber.medya.trt.com.tr/master_1080.m3u8
 #EXTINF:-1 tvg-name="CNN Türk" tvg-logo="https://images.seeklogo.com/logo-png/61/2/cnn-turk-logo-png_seeklogo-612503.png" group-title="Haber",CNN Türk
-https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/playlist.m3u8?&live=true&app=com.cnnturk&st=yV_c_VYwlrBMi7gt7sEUQQ&e=1792000081
+https://live.duhnet.tv//S2/HLS_LIVE/cnnturknp/track_3_750/playlist.m3u8?&live=true&app=com.cnnturk&st=3ZHYl2UbvTcOP1glRPwpaA&e=1792144428
 #EXTINF:-1 tvg-name="NTV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/b/b5/NTV_logo.png?utm_source=tr.wikipedia.org&utm_campaign=index&utm_content=original" group-title="Haber",NTV
 https://dogus.daioncdn.net/ntv/ntv_1080p.m3u8?token=e8c0dec16bf84c8cc187224d13811c0e705fd2c58b25d7ee&sid=8u11hrotqosx&app=c68bddbe-3dbf-49f7-892a-93de5ae37f1f&ce=3
 #EXTINF:-1 tvg-name="HABER TÜRK" tvg-logo="https://www.haberturk.com/images/common/logo/svg/haberturk-logo.svg" group-title="Haber",HABER TÜRK
