@@ -26,7 +26,7 @@ https://dogus.daioncdn.net/ntv/ntv_1080p.m3u8?token=e8c0dec16bf84c8cc187224d1381
 #EXTINF:-1 tvg-name="HABER TÜRK" tvg-logo="https://www.haberturk.com/images/common/logo/svg/haberturk-logo.svg" group-title="Haber",HABER TÜRK
 https://images.seeklogo.com/logo-png/30/2/haberturk-tv-ve-gazete-logo-png_seeklogo-307034.png
 #EXTINF:-1 tvg-name="A Haber" tvg-logo="https://iahbr.tmgrup.com.tr/tmdcore/v1/images/logo.png" group-title="Haber",A Haber
-https://trkvz.daioncdn.net/ahaber/ahaber_1080p.m3u8?e=1792034716&st=uyySmLmX3cwBbHFka9iHXQ&sid=8u11p9jvr1sn&app=9aedd495-cc54-4ad3-a01d-9573163f078a&ce=2
+https://trkvz-live.ercdn.net/ahaberhd/ahaberhd.m3u8
 #EXTINF:-1 tvg-name="HALK TV" tvg-logo="https://i.ibb.co/DYhmg6k/halk-tv.png" group-title="Haber",HALK TV
 https://halktv.daioncdn.net/halktv/halktv_1080p.m3u8?app=c86957d3-74a7-44da-9ad2-dc358c769609
 #EXTINF:-1 tvg-name="TV100" tvg-logo="https://s2.ensonhaber.com/assets/img/tv/tv100.webp" group-title="Haber",TV100
@@ -38,7 +38,7 @@ https://demiroren.daioncdn.net/teve2/teve2_1080p.m3u8?&sid=8u178djhjvzk&app=6aab
 #EXTINF:-1 tvg-name="Show TV" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/f/f1/Logo_of_Show_TV.png?utm_source=tr.wikipedia.org&utm_campaign=index&utm_content=original" group-title="Ulusal",Show TV
 https://rmtftbjlne.turknet.ercdn.net/bpeytmnqyp/showtv/showtv_720p.m3u8
 #EXTINF:-1 tvg-name="Kral Pop" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2g3GXFM3hogCQwv94vjWVZa0Fw2bDWeIVes_p4HmqbjRGd3qWdbNpxVNJ&s=10" group-title="Müzik",Kral Pop
-https://dogusdyg-kralpoptv.lg.mncdn.com/dogusdyg-kralpoptv/dogusdyg_kralpoptv.smil/chunklist_w2146770241_b2000096.m3u8?st=NVOMsEtqomPOEoN52zag7Q&e=1792080569
+http://dygvideo.dygdigital.com/live/hls/kralpop
 #EXTINF:-1 tvg-name="TRT Müzik" tvg-logo="https://tr.canlitv.watch/channels/trt-muzik.webp" group-title="Müzik",TRT Müzik
 https://tv-trtmuzik.medya.trt.com.tr/master_480.m3u8
 #EXTINF:-1 tvg-name="Dream Türk" tvg-logo="https://tr.canlitv.watch/channels/dream-turk-tv.webp" group-title="Müzik",Dream Türk
@@ -93,3 +93,35 @@ https://s7.gelsistirire.top/d/zqnarakpsk3rtzj5ctwqdv4xcd65nn5frfxvwmi67znmpxsf7q
 https://s5.gelsistirire.top/d/zynmcgkosk3rtzj5alwudvw7cmc25nesqv4dr27clbbvpf7g74sb6r5tlwzbsvvmfak4fqry/Soygun%20Oyunu%20Buyuk%20Vurgun%202022%20WEB-DL%201080p.mp4
 #EXTINF:-1 tvg-name="Aşk Tutulması" tvg-logo="https://image.tmdb.org/t/p/w500/cz3urmK63RGRWWAId4x4lFQhq6f.jpg" group-title="Filmler",Aşk Tutulması
 https://s5.gelsistirire.top/d/zynifvkjsk3rtzj5hdwrfrebceeru5lasnnjjvrvubstuz6pzsp36y6xuxwgkqzoz66kta7e/Ask%20TutulmasiI%202008%20WEB-DL%201080p.mp4
+#EXTINF:-1 tvg-name="Med Muzik (1080p)" tvg-logo="https://i.imgur.com/gtUFmCD.png" group-title="Müzik",Med Muzik (1080p)
+http://54.36.110.140/live3/live3.m3u8
+#EXTINF:-1 tvg-name="Number 1 Ask (720p)" tvg-logo="https://i.imgur.com/slwbux7.png" group-title="Müzik",Number 1 Ask (720p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e18f9cea15_1/playlist.m3u8
+#EXTINF:-1 tvg-name="Number 1 Damar (720p)" tvg-logo="https://i.imgur.com/rYtbAGZ.png" group-title="Müzik",Number 1 Damar (720p)
+https://b01c02nl.mediatriple.net/videoonlylive/mtkgeuihrlfwlive/u_stream_5c9e198784bdc_1/playlist.m3u8
+#EXTINF:-1 tvg-name="PowerTurk Akustik (1080p)" tvg-logo="https://i.imgur.com/driabBO.png" group-title="Müzik",PowerTurk Akustik (1080p)
+https://livetv.powerapp.com.tr/pturkakustik/akustik.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="PowerTurk Slow (1080p)" tvg-logo="https://i.imgur.com/tQSoQXW.png" group-title="Müzik",PowerTurk Slow (1080p)
+https://livetv.powerapp.com.tr/pturkslow/slow.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="PowerTurk Taptaze (1080p)" tvg-logo="https://i.imgur.com/a5nW3HU.png" group-title="Müzik",PowerTurk Taptaze (1080p)
+https://livetv.powerapp.com.tr/pturktaptaze/taptaze.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="TRT Muzik (720p)" tvg-logo="https://i.imgur.com/JgUzRH8.png" group-title="Müzik",TRT Muzik (720p)
+https://tv-trtmuzik.medya.trt.com.tr/master.m3u8
+#EXTINF:-1 tvg-name="ATV Avrupa (576p)" tvg-logo="https://i.tmgrup.com.tr/aav/site/v1/i/atv-avrupa-logo.png" group-title="Ulusal",ATV Avrupa (576p)
+https://flask-api-hls-atvavrupahdtrkvz-live.onrender.com/hls_stream/master.m3u8
+#EXTINF:-1 tvg-name="Beyaz TV (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/uykIdML.png" group-title="Ulusal",Beyaz TV (720p) [Not 24/7]
+https://mn-nl.mncdn.com/blutv_beyaztv2/live.m3u8
+#EXTINF:-1 tvg-name="Bir TV (720p)" tvg-logo="https://birtv.tv/assets/upload/637f83951df60.png" group-title="Ulusal",Bir TV (720p)
+https://edge.taksimbilisim.com/birtv/bant1/playlist.m3u8
+#EXTINF:-1 tvg-name="PowerTurk TV (720p)" tvg-logo="https://i.imgur.com/9OPoXQG.png" group-title="Ulusal",PowerTurk TV (720p)
+https://live.artidijitalmedya.com/artidijital_powerturktv/powerturktv/playlist.m3u8
+#EXTINF:-1 tvg-name="Semerkand TV (1080p) [Not 24/7]" tvg-logo="https://i.imgur.com/UVGGrQd.png" group-title="Ulusal",Semerkand TV (1080p) [Not 24/7]
+https://b01c02nl.mediatriple.net/videoonlylive/mtisvwurbfcyslive/broadcast_58d915bd40efc.smil/playlist.m3u8
+#EXTINF:-1 tvg-name="Show Turk (1080p)" tvg-logo="https://i.imgur.com/fdZpGDj.png" group-title="Ulusal",Show Turk (1080p)
+https://raw.githubusercontent.com/bnyusuf67-crypto/streams/refs/heads/main/streams/shturk.m3u8
+#EXTINF:-1 tvg-name="Tele 1 (1080p)" tvg-logo="https://upload.wikimedia.org/wikipedia/tr/4/43/Tele1_logosu.png" group-title="Ulusal",Tele 1 (1080p)
+https://tele1-live.ercdn.net/tele1/tele1.m3u8
+#EXTINF:-1 tvg-name="Kanal 7 (720p)" tvg-logo="https://i.imgur.com/0gq9xOm.png" group-title="Ulusal",Kanal 7 (720p)
+https://kanal7.blutv.com/blutv_kanal7_live/live.m3u8
+#EXTINF:-1 tvg-name="Kanal 7 Avrupa (720p) [Not 24/7]" tvg-logo="https://i.imgur.com/wlfyj5l.png" group-title="Ulusal",Kanal 7 Avrupa (720p) [Not 24/7]
+https://livetv.radyotvonline.net/kanal7live/kanal7avr/playlist.m3u8
