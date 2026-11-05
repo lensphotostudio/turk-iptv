@@ -14,7 +14,21 @@
 .detail-modal{width:min(680px,100%);max-height:88vh;overflow:auto;background:#fff;border-radius:18px;padding:18px;box-shadow:0 15px 50px #0003}
 .detail-head{display:flex;justify-content:space-between;align-items:center;gap:12px;position:sticky;top:-18px;background:#fff;padding:3px 0 12px}
 .detail-head h2{margin:0;font-size:18px;color:var(--navy)}
+
 .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.detail-block{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)}
+.detail-block h3{font-size:13px;color:var(--navy);margin:0 0 9px}
+.detail-item.wide{grid-column:1/-1}
+.detail-item strong{display:block}
+.detail-flags{display:flex;gap:7px;flex-wrap:wrap}
+.detail-flag{font-size:12px;padding:7px 10px;border-radius:9px;background:#edf7f2;color:#147653;border:1px solid #d8eee4}
+.detail-flag.off{background:#f5f6f8;color:#8792a2;border-color:#e8ebef}
+.service-list{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.service-line{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;background:#fbfcff}
+.service-line b{font-size:12px;color:var(--navy)}
+.service-line span{font-size:12px;color:var(--green);font-weight:700;white-space:nowrap}
+.detail-note{padding:11px 12px;background:#f7f9fc;border:1px solid var(--line);border-radius:10px;white-space:pre-wrap;font-size:13px;color:#334155}
+
 .detail-item{padding:10px;border:1px solid var(--line);border-radius:10px;min-width:0}
 .detail-item small{display:block;color:var(--muted);font-size:11px;margin-bottom:3px}
 .detail-item strong{font-size:13px;overflow-wrap:anywhere;white-space:pre-wrap}
@@ -42,7 +56,37 @@ function groupSalons(g){let a=g?.salons||g?.salonIds||g?.venues||g?.items||[];if
 function load(x,label){let d=getData(x);if(!Array.isArray(d.weddings)||!Array.isArray(d.sales))throw Error('Bu dosya Düğün Takip yedeği değil veya düğün/satış verileri bulunamadı.');backup=d;let groups=d.settings?.salonGroups||[];$('group').innerHTML='<option value="">Tüm salon grupları</option>'+groups.map(g=>`<option value="${esc(g.id)}">${esc(g.name)}</option>`).join('');let years=[2026,2027,2028];$('monthPick').innerHTML='<option value="">Ay seç (tüm tarihler)</option>'+years.flatMap(y=>Array.from({length:12},(_,i)=>`<option value="${y}-${String(i+1).padStart(2,'0')}">${y} · ${['Ocak','Şubat','Mart','Nisan','Mayıs','Haziran','Temmuz','Ağustos','Eylül','Ekim','Kasım','Aralık'][i]}</option>`)).join('');updateSalonOptions();$('status').textContent=label+' · '+d.weddings.length+' düğün kaydı ve '+d.sales.length+' satış kaydı yüklendi.';render()}
 function updateSalonOptions(){if(!backup)return;let gid=$('group').value;let gs=backup.settings?.salonGroups||[];let g=gs.find(x=>String(x.id)===String(gid));let names=groupSalons(g);let all=[...new Set((backup.weddings||[]).map(w=>w.salonName||w.salon).filter(Boolean))];let chosen=gid?(names.length?names:all.filter(n=>(backup.weddings||[]).some(w=>String(w.groupId||w.salonGroupId)===String(gid)&&(w.salonName||w.salon)===n))):all;$('salonPick').innerHTML='<option value="">Tüm salonlar</option>'+chosen.map(n=>`<option value="${esc(n)}">${esc(n)}</option>`).join('');let box=$('groupPreview');if(gid&&g){box.style.display='block';box.innerHTML=`<h3>${esc(g.name)} · Salonlar</h3><div class="chips">${(names.length?names:chosen).map(n=>`<span class="chip">${esc(n)}</span>`).join('')||'<span class="meta">Bu grupta kayıtlı salon listesi bulunamadı.</span>'}</div>`}else{box.style.display='none';box.innerHTML=''}}
 function render(){if(!backup)return;let d=backup,from=$('from').value,to=$('to').value,group=$('group').value,salon=$('salonPick').value,q=$('search').value.toLocaleLowerCase('tr-TR');let rows=(d.weddings||[]).filter(w=>{let date=String(w.date||w.weddingDate||'').slice(0,10);let g=(d.settings?.salonGroups||[]).find(x=>x.id===(w.groupId||w.salonGroupId));let hay=[w.customerName,w.brideName,w.groomName,w.phone,w.salon,w.salonName,g?.name].join(' ').toLocaleLowerCase('tr-TR');return(!from||date>=from)&&(!to||date<=to)&&(!group||String(group)===String(w.groupId||w.salonGroupId))&&(!salon||salon===(w.salonName||w.salon))&&(!q||hay.includes(q))}).sort((a,b)=>String(a.date||a.weddingDate||'').localeCompare(String(b.date||b.weddingDate||'')));$('count').textContent=rows.length;$('total').textContent=money(rows.reduce((s,w)=>s+Number(w.total||w.totalPrice||0),0));let sales=(d.sales||[]);$('sales').textContent=money(sales.reduce((s,x)=>s+Number(x.amount||x.price||x.total||0),0));$('weddings').className=rows.length?'':'empty';$('weddings').innerHTML=rows.length?rows.map((w,i)=>{let name=w.customerName||[w.brideName,w.groomName].filter(Boolean).join(' & ')||w.name||'İsimsiz müşteri';return `<article class="wedding" data-row="${i}"><div class="wedding-head"><div><h3>${esc(name)}</h3><div class="meta">${dateFmt(w.date||w.weddingDate)} · ${esc(w.time||'Saat belirtilmedi')}</div><div class="meta">${esc(w.salonName||w.salon||'Salon belirtilmedi')} · ${esc(w.packageName||'Paket belirtilmedi')}</div></div><span class="pill">${esc(w.status||'Düğün')}</span></div><div class="meta">${esc(w.phone||'Telefon yok')}</div><div class="amount">${money(w.total||w.totalPrice||0)}</div><div class="meta">Dokunarak tüm müşteri detaylarını gör</div></article>`}).join(''):'<div class="empty">Bu filtrelerde düğün bulunamadı.</div>';[...$('weddings').querySelectorAll('[data-row]')].forEach((el,i)=>el.onclick=()=>showDetails(rows[i]));$('salesList').className=sales.length?'':'empty';$('salesList').innerHTML=sales.length?sales.slice().reverse().slice(0,30).map(s=>`<div class="sale-row"><span>${esc(s.description||s.name||s.type||'Satış')}<small class="meta"> ${dateFmt(s.date)}</small></span><b>${money(s.amount||s.price||s.total||0)}</b></div>`).join(''):'Satış kaydı bulunamadı.'}
-function showDetails(w){let title=w.customerName||[w.brideName,w.groomName].filter(Boolean).join(' & ')||w.name||'Müşteri detayları';$('detailTitle').textContent=title;let hidden=/token|password|secret|authorization|cipher|salt|iv|tag/i;let preferred=['brideName','groomName','customerName','phone','date','weddingDate','time','salonGroupName','groupName','salonName','salon','packageName','total','totalPrice','paid','paidAmount','remaining','remainingAmount','status','notes','note','address','email'];let keys=[...new Set([...preferred.filter(k=>k in w),...Object.keys(w).filter(k=>!preferred.includes(k))])].filter(k=>!hidden.test(k));let labels={brideName:'Gelin',groomName:'Damat',customerName:'Müşteri',phone:'Telefon',date:'Tarih',weddingDate:'Düğün tarihi',time:'Saat',salonGroupName:'Salon grubu',groupName:'Salon grubu',salonName:'Salon',salon:'Salon',packageName:'Paket',total:'Anlaşma tutarı',totalPrice:'Toplam tutar',paid:'Alınan ödeme',paidAmount:'Alınan ödeme',remaining:'Kalan bakiye',remainingAmount:'Kalan bakiye',status:'Durum',notes:'Notlar',note:'Not',address:'Adres',email:'E-posta'};let html='<div class="detail-grid">';keys.forEach(k=>{let v=w[k];if(v===null||v===undefined||v==='')return;let value=(/date|Date/.test(k)?dateFmt(v):/(total|price|paid|amount|remaining|payment)/i.test(k)&&!isNaN(Number(v))?money(v):listVal(v));html+=`<div class="detail-item"><small>${esc(labels[k]||k.replace(/([A-Z])/g,' $1'))}</small><strong>${esc(value)}</strong></div>`});html+='</div>';let extraServices=w.services||w.extraServices||w.addons||w.extras;if(extraServices){html+='<h3 class="detail-section">Ek hizmetler</h3><div class="detail-item"><strong>'+esc(listVal(extraServices))+'</strong></div>'}$('detailContent').innerHTML=html;$('detailBackdrop').style.display='flex'}
+function showDetails(w){
+ const groups=backup?.settings?.salonGroups||[];
+ const group=groups.find(g=>String(g.id)===String(w.groupId));
+ const extras=Array.isArray(w.extraItems)?w.extraItems:[];
+ const oldExtras=Array.isArray(w.extras)?w.extras:(typeof w.extras==='string'?w.extras.split(/[,;]+/).map(x=>x.trim()).filter(Boolean):[]);
+ const serviceMap=new Map();
+ [...extras,...oldExtras].forEach(x=>{const name=typeof x==='string'?x:(x?.name||x?.title||'');if(name)serviceMap.set(name,typeof x==='object'?Number(x.price||0):null)});
+ const serviceRows=[...serviceMap.entries()];
+ const total=Number(w.total||0),deposit=Number(w.deposit||0),remaining=Math.max(0,total-deposit);
+ const item=(label,value,wide=false)=>value!==undefined&&value!==null&&value!==''?`<div class="detail-item ${wide?'wide':''}"><small>${esc(label)}</small><strong>${esc(value)}</strong></div>`:'';
+ const block=(title,content)=>content?`<section class="detail-block"><h3>${title}</h3>${content}</section>`:'';
+ const name=w.customerName||'Müşteri detayları';
+ $('detailTitle').textContent=name;
+ let html='<div class="detail-grid">';
+ html+=item('Müşteri',w.customerName)+item('Telefon',w.phone);
+ html+=item('Tarih',dateFmt(w.date))+item('Saat',w.time);
+ html+=item('Etkinlik türü',w.eventType||'Düğün')+item('Durum',w.status||'Planlandı');
+ html+=item('Salon grubu',group?.name||'Grup bilgisi yok')+item('Salon',w.venue||'Salon seçilmedi');
+ html+=item('Paket',w.customPackageName||w.packageName||'Paket belirtilmedi')+item('Fotoğrafçı',w.photographer||'Belirtilmedi');
+ html+=item('Videograf',w.videographer||'Belirtilmedi')+item('Yardımcı personel',w.assistant||'Belirtilmedi');
+ html+='</div>';
+ let flags=`<div class="detail-flags"><span class="detail-flag ${w.infoGiven?'':'off'}">${w.infoGiven?'✓ Bilgi verildi':'Bilgi verilmedi'}</span><span class="detail-flag ${w.called?'':'off'}">${w.called?'✓ Müşteri arandı':'Henüz aranmadı'}</span></div>`;
+ html+=block('İletişim durumu',flags);
+ let services=serviceRows.length?`<div class="service-list">${serviceRows.map(([n,p])=>`<div class="service-line"><b>✓ ${esc(n)}</b><span>${p!==null?money(p):'Seçildi'}</span></div>`).join('')}</div>`:'<div class="detail-note">Ek hizmet seçilmemiş.</div>';
+ html+=block('Seçilen ek hizmetler',services);
+ if(w.extraServiceNotes)html+=block('Ek hizmet notu',`<div class="detail-note">${esc(w.extraServiceNotes)}</div>`);
+ html+=block('Ödeme özeti',`<div class="detail-grid">${item('Paket / anlaşma toplamı',money(total))+item('Kapora / alınan ödeme',money(deposit))+item('Kalan bakiye',money(remaining))+item('İndirim',money(w.discount||0))}</div>`);
+ if(w.notes)html+=block('Müşteri notları',`<div class="detail-note">${esc(w.notes)}</div>`);
+ $('detailContent').innerHTML=html;
+ $('detailBackdrop').style.display='flex';
+}
 $('closeDetail').onclick=()=>$('detailBackdrop').style.display='none';$('detailBackdrop').onclick=e=>{if(e.target===$('detailBackdrop'))$('detailBackdrop').style.display='none'};
 function applyRange(kind){let now=new Date(),start,end;const iso=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;if(kind==='clear'){$('from').value='';$('to').value='';$('monthPick').value=''}else if(kind==='year'){start=new Date(2027,0,1);end=new Date(2027,11,31)}else if(kind==='month'){start=new Date(now.getFullYear(),now.getMonth(),1);end=new Date(now.getFullYear(),now.getMonth()+1,0)}else if(kind==='nextmonth'){start=new Date(now.getFullYear(),now.getMonth()+1,1);end=new Date(now.getFullYear(),now.getMonth()+2,0)}else{let day=(now.getDay()+6)%7;start=new Date(now.getFullYear(),now.getMonth(),now.getDate()-day+(kind==='nextweek'?7:0));end=new Date(start);end.setDate(start.getDate()+6)}if(start){$('from').value=iso(start);$('to').value=iso(end);$('monthPick').value=''}render()}
 document.querySelectorAll('[data-range]').forEach(b=>b.onclick=()=>applyRange(b.dataset.range));
